@@ -546,12 +546,8 @@ int commandHandler(char * args[]){
 		* want background execution or not
 		*/
 		args_aux[i] = NULL;
-		launchProg(args_aux,background);
-		
-		/**
-		 * For the part 1.e, we only had to print the input that was not
-		 * 'exit', 'pwd' or 'clear'. We did it the following way
-		 */
+		launchProg(args_aux,background);	
+	}
 return 1;
 }
 
@@ -569,10 +565,10 @@ int main(int argc __attribute__((unused)), char *argv[] __attribute__((unused)),
 	
 	/* We call the method of initialization and the welcome screen */
 	init();
-    
-    /* We set our extern char** environ to the environment, so that
-    /* we can treat it later in other methods
-    */
+
+	/* We set our extern char** environ to the environment, so that
+	* we can treat it later in other methods
+	*/
 	environ = envp;
 	
 	/* We set shell=<pathname>/simple-c-shell as an environment variable for
