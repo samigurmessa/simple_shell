@@ -41,7 +41,7 @@ void init(){
 			sigaction(SIGINT, &act_int, 0);
 			
 			/* Put ourselves in our own process group */
-			setpgid(GBSH_PID, GBSH_PID); // we make the shell process the new process group leader
+			setpgid(GBSH_PID, GBSH_PID); /* we make the shell process the new process group leader */
 			GBSH_PGID = getpgrp();
 			if (GBSH_PID != GBSH_PGID) {
 					printf("Error, the shell is not process group leader");
