@@ -542,7 +542,7 @@ return 1;
 /**
 * Main method of our shell
 */ 
-int main(int argc, char *argv[], char ** envp) {
+int main(int argc, char *argv[] __attribute__((unused), char ** envp) {
 	char line[MAXLINE]; // buffer for the user input
 	char * tokens[LIMIT]; // array for the different tokens in the command
 	int numTokens;
