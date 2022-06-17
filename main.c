@@ -14,8 +14,8 @@
 #include <termios.h>
 #include "main.h"
 
-#define LIMIT 256 // max number of tokens for a command
-#define MAXLINE 1024 // max number of characters from user input
+#define LIMIT 256 /* max number of tokens for a command */
+#define MAXLINE 1024 /* max number of characters from user input /*
 
 /**
  * Function used to initialize our shell. We used the approach explained in
@@ -542,7 +542,7 @@ return 1;
 /**
 * Main method of our shell
 */ 
-int main(int argc, char *argv[] __attribute__((unused)), char ** envp) {
+int main(int argc __attribute__((unused)), char *argv[] __attribute__((unused)), char ** envp) {
 	char line[MAXLINE]; // buffer for the user input
 	char * tokens[LIMIT]; // array for the different tokens in the command
 	int numTokens;
