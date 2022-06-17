@@ -68,7 +68,7 @@ void init(){
 /**
  * signal handler for SIGCHLD
  */
-void signalHandler_child(int p){
+void signalHandler_child(){
 	/* Wait for all dead processes.
 	 * We use a non-blocking call (WNOHANG) to be sure this signal handler will not
 	 * block if a child was cleaned up in another part of the program. */
@@ -80,7 +80,7 @@ void signalHandler_child(int p){
 /**
  * Signal handler for SIGINT
  */
-void signalHandler_int(int p){
+void signalHandler_int(){
 	// We send a SIGTERM signal to the child process
 	if (kill(pid,SIGTERM) == 0){
 		printf("\nProcess %d received a SIGINT signal\n",pid);
@@ -542,7 +542,7 @@ return 1;
 /**
 * Main method of our shell
 */ 
-int main(int argc, char *argv[] __attribute__((unused), char ** envp) {
+int main(int argc, char *argv[] __attribute__((unused)), char ** envp) {
 	char line[MAXLINE]; // buffer for the user input
 	char * tokens[LIMIT]; // array for the different tokens in the command
 	int numTokens;
