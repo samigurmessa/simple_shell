@@ -15,14 +15,14 @@
 #include "main.h"
 
 #define LIMIT 256 /* max number of tokens for a command */
-#define MAXLINE 1024 /* max number of characters from user input /*
+#define MAXLINE 1024 /* max number of characters from user input */
 
 /**
  * Function used to initialize our shell. We used the approach explained in
  * http://www.gnu.org/software/libc/manual/html_node/Initializing-the-Shell.html
  */
 void init(){
-		// See if we are running interactively
+		/* See if we are running interactively */
         GBSH_PID = getpid();
         // The shell is interactive if STDIN is the terminal  
         GBSH_IS_INTERACTIVE = isatty(STDIN_FILENO);  
