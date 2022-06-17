@@ -24,4 +24,4 @@ int (*get_builtin(char *cmd))(data_shell *)
 			break;
 	}
 
-	return (bui
+	return (builtin)
