@@ -2,7 +2,7 @@
 #define TRUE 1
 #define FALSE !TRUE
 
-// Shell pid, pgid, terminal modes
+/* Shell pid, pgid, terminal modes */
 static pid_t GBSH_PID;
 static pid_t GBSH_PGID;
 static int GBSH_IS_INTERACTIVE;
